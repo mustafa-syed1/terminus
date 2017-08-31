@@ -23,6 +23,54 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+
+            SomeSetupHere();
+        }
+
+        private void SomeSetupHere()
+        {
+            ContextMenu cm = new ContextMenu();
+
+            MenuItem mi1 = new MenuItem();
+            mi1.Header = "You like clicking";
+
+            MenuItem mi2 = new MenuItem();
+            mi2.Header = "This is not cool";
+
+            cm.Items.Add(mi1);
+            cm.Items.Add(mi2);
+
+            label3.ContextMenu = cm;
+        }
+
+        private void lable0MouseLtBtnDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Aha, left button is fun!");
+        }
+
+        private void lable1MouseEnter(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Mouse, this is restricted text!");
+        }
+
+        private void lable2MouseDblClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Ouch, double click hurts!");
+        }
+
+        private void lable3MouseRtBtnUp(object sender, MouseButtonEventArgs e)
+        {
+            label3.ContextMenu.IsOpen = true;
+        }
+
+        private void lable4MouseLeave(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Bye!");
+        }
+
+        private void lable5MouseMove(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Hehe, its funny");
         }
     }
 }

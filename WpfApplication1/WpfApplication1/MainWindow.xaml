@@ -6,7 +6,34 @@
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+
+    <Window.Resources>
+        <Style x:Key="SimpleSysResources" TargetType="{x:Type MenuItem}">
+            <Setter Property = "Background" Value=   
+                "{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}"/>
+            <Setter Property = "Foreground" Value=   
+                "{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}"/>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label0" Content="Row1, Col1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" MouseLeftButtonDown="lable0MouseLtBtnDown" />
+        <Label x:Name="label1" Content="Row1, Col2" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" MouseEnter="lable1MouseEnter"/>
+        <Label x:Name="label2" Content="Row2, Col1" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" MouseDoubleClick="lable2MouseDblClick"/>
+        <Label x:Name="label3" Content="Row2, Col2" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" MouseRightButtonUp="lable3MouseRtBtnUp"/>
+        <Label x:Name="label4" Content="Row3, Col1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0" MouseLeave="lable4MouseLeave"/>
+        <Label x:Name="label5" Content="Row3, Col2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" MouseMove="lable5MouseMove"/>
+
+
     </Grid>
 </Window>
