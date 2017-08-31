@@ -24,6 +24,7 @@ namespace WpfApplication1
         {
             InitializeComponent();
 
+            // calling special case
             SomeSetupHere();
         }
 
